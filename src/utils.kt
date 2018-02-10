@@ -55,24 +55,3 @@ class UnionFind {
     }
 }
 
-
-enum class Direction(val dy: Int, val dx: Int) {
-    NORTH(-1, 0),
-    SOUTH(+1, 0),
-    WEST(0, -1),
-    EAST(0, +1);
-
-    fun turnRight(): Direction = when(this) {
-        Direction.NORTH -> Direction.EAST
-        Direction.EAST -> Direction.SOUTH
-        Direction.SOUTH -> Direction.WEST
-        Direction.WEST -> Direction.NORTH
-    }
-
-    fun turnLeft(): Direction = when(this) {
-        Direction.NORTH -> Direction.WEST
-        Direction.EAST -> Direction.NORTH
-        Direction.SOUTH -> Direction.EAST
-        Direction.WEST -> Direction.SOUTH
-    }
-}

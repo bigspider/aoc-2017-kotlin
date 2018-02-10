@@ -1,4 +1,11 @@
 
+private enum class Direction(val dy: Int, val dx: Int) {
+    NORTH(-1, 0),
+    SOUTH(+1, 0),
+    WEST(0, -1),
+    EAST(0, +1)
+}
+
 private operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>) = Pair(first + other.first, second + other.second)
 private operator fun Pair<Int, Int>.plus(other: Direction) = this + Pair(other.dy, other.dx)
 
